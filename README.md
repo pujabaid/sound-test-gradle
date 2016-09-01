@@ -8,14 +8,14 @@ You can use it to quickly execute integration test for the prod and preprod envi
 
 You can simply clone this repository and then build and run it locally using Maven.
 
-#### Prerequisites
+## Prerequisites
 
 You need Gradle and Java 1.8 on your development machine.
 If your development environment is not set up already, see 
 [JDK 8](http://www.oracle.com/technetwork/java/javase/documentation/jdk8-doc-downloads-2133158.html).
 [Gradle](https://gradle.org/gradle-download/).
 
-#### Clone this repository
+## Clone this repository
 
 To clone the repository to your local machine using git, 
 replace the URL in the command example below with the one for your starter code on Github. 
@@ -26,7 +26,7 @@ git clone https://github.com/craft/sound-test-gradle.git
 cd sound-test-gradle
 
 
-#### Build and Run the test Automation
+## Build and Run the test Automation
 
 Build the project by navigating to the root directory and running:
 ```
@@ -68,19 +68,14 @@ sound-test-gradle/src/test/resources/sound/testng.xml
 ```
 
 
-## Directory Layout
-
+## Directory Layout Coming soon
 ```
-Coming soon
 
 ## Contact
 
 For assistance, submit questions to the developer community at
-https://answers.lc.intuit.com/tags/services%20platform
-or email the Nasa Quality team at mailto:opensource-api-quality@nasa.gov
+https://answers.lc.intuit.com/tags/services%20platform or email the Nasa Quality team at mailto:opensource-api-quality@nasa.gov
 =======
 # Description
 
 Java RestAssured based Test Automation Framework
-
-Release Notes: 
