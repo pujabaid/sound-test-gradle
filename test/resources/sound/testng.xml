@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="IntegrationTestSuite" verbose="1" parallel="false">
+
+
+    <test name="GetAllSoundsPositiveIT">
+        <classes>
+            <class name="api.nasa.gov.sound.rest.client.GetAllSoundsPositiveIT"/>
+        </classes>
+        </test>
+    <test name="GetAllSoundsNegativeIT">
+        <classes>
+            <class name="api.nasa.gov.sound.rest.client.GetAllSoundsNegativeIT"/>
+        </classes>
+    </test>
+</suite>

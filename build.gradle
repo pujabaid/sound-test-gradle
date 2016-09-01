@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.jayway.restassured:rest-assured:2.9.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'org.testng:testng:6.8.1'
+}
+
+
+test {
+    useTestNG() {
+        options.suites("src/test/resources/sound/testng.xml")
+        outputDirectory = file("$project.buildDir///target")
+        // runlist to executed. path is relative to current folder
+        useDefaultListeners = true
+    }
+
+    systemProperties System.getProperties()
+}
+
+//creating javadoc task for test code
+task testJavadoc(type: Javadoc) {
+    source = sourceSets.test.allJava
+    classpath = sourceSets.test.compileClasspath
+    // if not changed the destinationDir, the javadoc for production code is overridden.
+    destinationDir = file("${buildDir}/docs/testjavadoc")
+}
