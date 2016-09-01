@@ -23,7 +23,9 @@ You should have received this URL in an email from the services Platform team.
 You can also use Sourcetree to clone it. 
 
 https://github.com/pujabaid/sound-test-gradle.git
+```
 cd sound-test-gradle
+```
 
 
 ## Build and Run the test Automation
@@ -64,7 +66,6 @@ sound-test-gradle/build/docs/testjavadoc/index.html
 ```
 sound-test-gradle/src/test/resources/sound/testng.xml
 ```
-
 
 ## Directory Layout
 ```
