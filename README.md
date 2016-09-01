@@ -73,9 +73,11 @@ Coming Soon
 
 ## Contact
 
-For assistance, submit questions to the developer community at
-https://answers.lc.intuit.com/tags/services%20platform or email the Nasa Quality team at mailto:opensource-api-quality@nasa.gov
-=======
+For assistance email the Nasa Quality team at 
+```
+mailto:opensource-api-quality@nasa.gov
+```
+
 # Description
 
-Java RestAssured based Test Automation Framework
+Java RestAssured based Test Automation Framework for Nasa Opensource API
