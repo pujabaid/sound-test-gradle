@@ -2,16 +2,15 @@
 
 This is a high level list of all the test types that must happen before the code is certified to go Live
 
-## Mocked Unit Test
+## Unit Test
 - Unit test must be fully mocked out and added as part of any feature addition
 
 ## Functional Test
 - All the positive and negative use cases identified in the Functional test plan must pass before code sign off can happen.
 - Code coverage numbers should be > 95% and must be targeted to be 100%
--
 
 ## End To End Customer Test
-= Customer sign-off in preprod environment must be taken before prod release of new service.
+- Customer sign-off in preprod environment must be taken before prod release of new service.
 - For subsequent release, backward compatibility must be ensured
 
 ## Performance Test
