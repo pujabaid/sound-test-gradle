@@ -30,45 +30,45 @@ cd sound-test-gradle
 
 Build the project by navigating to the root directory and running:
 ```
-
 gradle clean build -x test
 ```
 
 Execute Tests by navigating to the root directory and running:
 ```
-
 gradle clean test -Denv=prd
 ```
 
 Test Results can be found at
-
+```
 sound-test-gradle/build/reports/tests/index.html
 ```
 
 TestNG Results can be found at
-
+```
 sound-test-gradle/build/target/index.html
 ```
 
 ## Next Steps
 
 - Generate javadocs for the test automation classes by running:
-
+```
 gradle  testJavaDoc
 ```
 
 Test javadocs can be found at
-
+```
 sound-test-gradle/build/docs/testjavadoc/index.html
 ```
 
 - To Implement and add new Test Cases update exisitng testng.xml file or create a new one and pass the path in build.gradle
-
+```
 sound-test-gradle/src/test/resources/sound/testng.xml
 ```
 
 
-## Directory Layout Coming soon
+## Directory Layout
+```
+Coming Soon
 ```
 
 ## Contact
