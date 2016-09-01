@@ -54,7 +54,7 @@ public class GetAllSoundsNegativeIT extends AbstractSoundBaseTest{
     }
 
     @DataProvider(name = "getAllSoundsWithInvalidApiKey")
-    public Object[][] getAllSoundsWithInvalidApiKey() {
+    public Object[][] getAllSoundsWithInvalidApiKey(String apikey, Integer responsecode) {
 
         return new Object[][]
 
