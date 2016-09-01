@@ -22,7 +22,7 @@ replace the URL in the command example below with the one for your starter code 
 You should have received this URL in an email from the services Platform team. 
 You can also use Sourcetree to clone it. 
 
-git clone https://github.com/craft/sound-test-gradle.git
+https://github.com/pujabaid/sound-test-gradle.git
 cd sound-test-gradle
 
 
