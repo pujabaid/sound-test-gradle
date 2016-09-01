@@ -84,7 +84,7 @@ public class GetAllSoundsNegativeIT extends AbstractSoundBaseTest{
             response = soundServiceClient.getAllSoundsUsingQueryParam(queryParams);
             printObject.printObject(response);
             response.then().assertThat().statusCode(responsecode).and().
-                    assertThat().body("error.code", equalTo(TestConstant.API_KEY_INVALID_MSG)).and().
+                    assertThat().body("error.code", equalTo(TestConstant.API_KEY_INVALID)).and().
                     assertThat().body("error.message", equalTo(TestConstant.API_KEY_INVALID_MSG + baseURI));
         }catch (Exception e) {
             System.out.println(e);

@@ -15,12 +15,12 @@ public class SoundServiceClientImpl extends AbstractSoundBaseTest implements Sou
 
     @Override
     public Response getAllSounds() {
-        String url = baseURI+"/"+basePath;
-        System.out.println("url is : "+url);
+//        String url = baseURI+"/"+basePath;
+//        System.out.println("url is : "+url);
         Response response = given().
                 contentType(TestConstant.JSON_CONTENT_TYPE).
                 when().
-                get(url).
+                get().
                 then().
                 extract().response();
         return response;
@@ -28,13 +28,13 @@ public class SoundServiceClientImpl extends AbstractSoundBaseTest implements Sou
 
     @Override
     public Response getAllSoundsUsingQueryParam(Map<String,Object> queryParams) {
-        String url = baseURI+"/"+basePath;
-        System.out.println("url is : "+url);
+//        String url = baseURI+"/"+basePath;
+//        System.out.println("url is : "+url);
         Response response = given().
                 contentType(TestConstant.JSON_CONTENT_TYPE).
                 queryParameters(queryParams).
                 when().
-                get(url).
+                get().
                 then().
                 extract().response();
         return response;
@@ -43,13 +43,13 @@ public class SoundServiceClientImpl extends AbstractSoundBaseTest implements Sou
     @Override
     public Response getAllSoundsUsingUrl(String queryparam) {
 
-        String url = baseURI+"/"+basePath;
-        System.out.println("url is : "+url);
+//        String url = baseURI+"/"+basePath;
+//        System.out.println("url is : "+url);
         Response response = given().
                 contentType(TestConstant.JSON_CONTENT_TYPE).
                 queryParameters(queryParams).
                 when().
-                get(url).
+                get().
                 then().
                 extract().response();
         return response;    }
