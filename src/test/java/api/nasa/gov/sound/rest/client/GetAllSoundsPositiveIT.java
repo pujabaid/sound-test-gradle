@@ -4,18 +4,35 @@ import api.nasa.gov.sound.config.SoundConfig;
 import api.nasa.gov.sound.constant.TestConstant;
 import api.nasa.gov.sound.setup.AbstractSoundBaseTest;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.notNullValue;
 
 /**
  * Created by pbaid on 8/31/16.
  */
 public class GetAllSoundsPositiveIT extends AbstractSoundBaseTest{
 
-    @Test(groups = "positiveSoundTest")
-    public void shouldGetAllSoundsWithoutQueryParamAndDefaultLimitAndSucceed()
+    @DataProvider(name = "getAllSoundsWithValidLimit")
+    public Object[][] getAllSoundsWithValidLimit() {
+
+        return new Object[][]
+
+                {
+
+                        {"", SoundConfig.defaultLimit, 200},
+                        {"0", SoundConfig.defaultLimit, 200},
+                        {"-1", SoundConfig.defaultLimit, 200},
+                        {"100000000",64,200},
+                        {"-100",64,200},
+                        {"-100",64,200},
+                        {"a",64,200},
+                };
+    } 
+    
+    @Test(groups = "positiveSoundTest", dataProvider = "getAllSoundsWithValidLimit")
+    public void shouldGetAllSoundsWithValidApiKeyAndValidLimit(String limit, Integer returnedRecordCount, Integer responsecode)
     {
         try{
             String testName = new Object() {
@@ -24,11 +41,11 @@ public class GetAllSoundsPositiveIT extends AbstractSoundBaseTest{
 
             queryParams.clear();
             queryParams.put(TestConstant.APIKEY_QUERY_PARAM,SoundConfig.apiKey);
+            queryParams.put(TestConstant.LIMIT_QUERY_PARAM,limit);
             response = soundServiceClient.getAllSoundsUsingQueryParam(queryParams);
             printObject.printObject(response);
-            response.then().assertThat().statusCode(200).and().
-                    assertThat().body("count", equalTo(SoundConfig.defaultLimit)).and().
-                    assertThat().body("results["+(SoundConfig.defaultLimit-1)+"].description", notNullValue());
+            response.then().assertThat().statusCode(responsecode).and().
+                    assertThat().body("count", equalTo(returnedRecordCount));
 
 
         }catch (Exception e) {

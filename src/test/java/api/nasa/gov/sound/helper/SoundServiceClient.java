@@ -13,5 +13,7 @@ public interface SoundServiceClient {
 
     public Response getAllSoundsUsingQueryParam(Map<String,Object> queryParams);
 
+    public Response getAllSoundsUsingUrl(String url);
+
 
 }

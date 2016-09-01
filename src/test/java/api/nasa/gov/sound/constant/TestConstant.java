@@ -18,5 +18,16 @@ public class TestConstant {
     public static final String POST = "POST";
     public static final String DELETE = "DELETE";
 
+    public static final String API_KEY_MISSING = "API_KEY_INVALID";
+    public static final String API_KEY_MISSING_MSG = "ANo api_key was supplied. Get one at ";
+
+    public static final String API_KEY_INVALID = "API_KEY_INVALID";
+    public static final String API_KEY_INVALID_MSG = "An invalid api_key was supplied. Get one at ";
+
+    public static final String LIMIT_INVALID = "LIMIT_INVALID";
+    public static final String LIMIT_INVALID_MSG = "An invalid limi was supplied. Pls make sure it is an integer ";
+
+
+
 
 }

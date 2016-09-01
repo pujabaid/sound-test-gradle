@@ -40,5 +40,17 @@ public class SoundServiceClientImpl extends AbstractSoundBaseTest implements Sou
         return response;
     }
 
+    @Override
+    public Response getAllSoundsUsingUrl(String queryparam) {
 
+        String url = baseURI+"/"+basePath;
+        System.out.println("url is : "+url);
+        Response response = given().
+                contentType(TestConstant.JSON_CONTENT_TYPE).
+                queryParameters(queryParams).
+                when().
+                get(url).
+                then().
+                extract().response();
+        return response;    }
 }
