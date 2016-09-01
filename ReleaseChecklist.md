@@ -56,3 +56,6 @@ Be ruthless with the system
 - for every regression phase passed the code is promoted to the next hisger level environment
 eg: dev -> qa -> staging -> performance -> production
 
+## Rollback strategy
+- Despite all teh effort is there is an unintended production impact, the rollback runbook should be readily available to revert the code to previous working state. All the things to do in prd must be tested in preprod environments
+
