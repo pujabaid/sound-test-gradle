@@ -30,7 +30,7 @@ public class GetAllSoundsNegativeIT extends AbstractSoundBaseTest{
     }
 
     @Test(groups = "negativeSoundTest", dataProvider = "getAllSoundsWithMissingApiKey")
-    public void shouldFailToGetAllSoundsWithMissingApiKey()
+    public void shouldFailToGetAllSoundsWithMissingApiKey(String apikey, Integer responsecode)
     {
         try{
             String testName = new Object() {
@@ -39,7 +39,7 @@ public class GetAllSoundsNegativeIT extends AbstractSoundBaseTest{
 
             response = soundServiceClient.getAllSounds();
             printObject.printObject(response);
-            response.then().assertThat().statusCode(403).and().
+            response.then().assertThat().statusCode(responsecode).and().
                     assertThat().body("error.code", equalTo(TestConstant.API_KEY_MISSING)).and().
                     assertThat().body("error.message", equalTo(TestConstant.API_KEY_MISSING_MSG + baseURI));
         }catch (Exception e) {

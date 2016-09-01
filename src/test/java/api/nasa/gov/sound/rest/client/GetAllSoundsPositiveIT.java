@@ -14,6 +14,12 @@ import static org.hamcrest.Matchers.equalTo;
  */
 public class GetAllSoundsPositiveIT extends AbstractSoundBaseTest{
 
+    // test plan (for a positive test plan)
+    // possible query param & combinations
+    // limit : depending
+//    q
+//    apikey
+
     @DataProvider(name = "getAllSoundsWithValidLimit")
     public Object[][] getAllSoundsWithValidLimit() {
 
@@ -22,11 +28,12 @@ public class GetAllSoundsPositiveIT extends AbstractSoundBaseTest{
                 {
 
                         {"", SoundConfig.defaultLimit, 200},
-                        {"0", SoundConfig.defaultLimit, 200},
-                        {"-1", SoundConfig.defaultLimit, 200},
+                        {"0", 0, 200},
+//                        {"-1", SoundConfig.defaultLimit, 200},
+                        {"44",44,200},
                         {"100000000",64,200},
-                        {"-100",64,200},
-                        {"-100",64,200},
+//                        {"-100",64,200},
+//                        {"-100",64,200},
                         {"a",64,200},
                 };
     } 
